@@ -1,0 +1,18 @@
+n=10, O(N2)'s time = 0.000000 secends 
+n=100, O(N2)'s time = 0.000000 secends 
+n=1000, O(N2)'s time = 0.002000 secends 
+n=10000, O(N2)'s time = 0.176000 secends 
+n=100000, O(N2)'s time = 16.501000 secends 
+
+n=10, O(Nlog2n)'s time = 0.000000 secends 
+n=100, O(Nlog2n)'s time = 0.000000 secends 
+n=1000, O(Nlog2n)'s time = 0.000000 secends 
+n=10000, O(Nlog2n)'s time = 0.001000 secends 
+n=100000, O(Nlog2n)'s time = 0.011000 secends 
+
+n=10, O(N)'s time = 0.000000 secends 
+n=100, O(N)'s time = 0.000000 secends 
+n=1000, O(N)'s time = 0.000000 secends 
+n=10000, O(N)'s time = 0.000000 secends 
+n=100000, O(N)'s time = 0.000000 secends 
+n=1000000, O(N)'s time = 0.004000 secends 
