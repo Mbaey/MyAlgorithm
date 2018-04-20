@@ -93,10 +93,29 @@ int n2()//BF
     }
     return maxS;
 }
-long long n1()//greedy
+/*
+def:d[i][j] is 最大连续和 of [i,j)  then result is d[1][n]
+init:d[i][j]=0
+forward:d[i][j]=max{sum[a][b]} i<= a<b <=j  但这就没有递推了啊。。 YES ! but 这就是BF了
+forward:d[i][j]=max{d[i][j-1],d[i][j-1]+a[j]} i<= a<b <j error d[i][j-1]+a[j] d[i][j-1]的最大连续子段和可不一定 是包含j-1的
+
+def:d[i] is 最大连续和 of [1,j)  then result is d[n]
+init:d[i]=0
+forward:d[j]=max{d[j-1],d[j-1]+a[j]} i<= b <j  error! 这样就变成没有连续的、、最大和了。。
+
+def:max is 最大连续子段和。
+init:max=0
+forword: 遍历a
+算每个子段和Tij，
+如果Tij<0, Tj=0,
+否则Tij += a[j].
+如果Tij>max，更新max
+*/
+int ndp()
 {
-    long long res=0, max=0;
-    for(int i=0; i<n; i++){
+    int res=0, max=0;
+    for(int i=0; i<n; i++)
+    {
         if(res < 0) res = a[i];
         else res += a[i];
 
@@ -105,6 +124,15 @@ long long n1()//greedy
     return max;
 }
 
+
+//int n1(){//greedy error?
+//    int t=0;
+//    for(int i=0; i<n; i++){
+//        if(t < 0) t=a[i];
+//        if(t+a[i]>t) t+=a[i];
+//    }
+//    return t;
+//}
 int main()
 {
 //    printf("%d %f", (int)n, 5/3.0);
@@ -117,7 +145,7 @@ int main()
             a[i] = rand() % 1000 - 500;
 
         startTime = clock();
-        int N1= n1();
+        int N1= ndp();
 //        int N2=  n2();
 //        int Nlogn= nlogn(0, n);
 
