@@ -29,7 +29,7 @@ void say_diff(string p, string t)
             printf("T[%d]:%c is ²åÈë after P[%d]:%c\n", j-1, t[j-1], i-1, p[i-1]);
             j--;
         }else if(dp[i][j] == dp[i-1][j]+1){
-            printf("T[%d]:%c is É¾³ý in P[%d]:%c\n", j-1, t[j-1], i-1, p[i-1]);
+            printf("T[%d]ºóÉ¾³ý in P[%d]:%c\n", j-1, i-1, p[i-1]);
             i--;
         }else{
             if(dp[i][j] == dp[i-1][j-1]){
