@@ -11,6 +11,7 @@ struct elephant{
 bool cmp(elephant a, elephant b){
     return a.w < b.w;
 }
+ /* 找出重量从小到大、智商从大到小排列的最长子序列 */
 /*
 def: dp[i] is [0, i]最长递减子序列的长度
 init dp[0]=1
